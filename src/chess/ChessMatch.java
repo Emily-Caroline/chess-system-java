@@ -42,6 +42,9 @@ public class ChessMatch {
         if (!board.thereIsApiece(position)) {
             throw new ChessExeption("Nao existe peça nesta posição de origem");
         }
+        if (!board.piece(position).isThereAnyPossibleMove()){
+            throw new ChessExeption("Nao existe movimentos possivies para a peça escolhida ");
+        }
     }
 
     //esse metodo recebe as cordenadas do xadrez
